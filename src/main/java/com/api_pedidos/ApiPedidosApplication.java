@@ -69,6 +69,10 @@ public class ApiPedidosApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Categoria c1 = new Categoria(null, "Informática");
 		Categoria c2 = new Categoria(null, "Escritório");
+		Categoria c3 = new Categoria(null, "Cama mesa e banho");
+		Categoria c4 = new Categoria(null, "Jogos");
+		Categoria c5 = new Categoria(null, "Esportes");
+		Categoria c6 = new Categoria(null, "Roupas");
 		
 		Produto p1 = new Produto(null, "Computador", 2000.00);
 		Produto p2 = new Produto(null, "Impressora", 800.00);
@@ -125,7 +129,7 @@ public class ApiPedidosApplication implements CommandLineRunner {
 		p2.getItens().addAll(Arrays.asList(IP3));
 		p3.getItens().addAll(Arrays.asList(IP2));
 		
-		categoriaRepository.saveAll(Arrays.asList(c1, c2));
+		categoriaRepository.saveAll(Arrays.asList(c1, c2,c3,c4,c5,c6));
 		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 		estadoRepository.saveAll(Arrays.asList(e1, e2));
 		cidadeRepository.saveAll(Arrays.asList(cit1,cit2,cit3));
